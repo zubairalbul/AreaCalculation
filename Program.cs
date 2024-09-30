@@ -49,7 +49,12 @@ namespace Simple_Hospital_Management_System2
 
         class triangle : Shape
         {
-           
+            public triangle(double baseLength, double height) : base(baseLength, height) { }
+
+            public override double Area()
+            {
+                return 0.5 * length * width;
+            }
         }
 
         class rectangle : Shape
