@@ -54,7 +54,12 @@ namespace Simple_Hospital_Management_System2
 
         class rectangle : Shape
         {
-          
+            public rectangle(double length, double width) : base(length, width) { }
+
+            public override double Area()
+            {
+                return length * width;
+            }
         }
 
     }
