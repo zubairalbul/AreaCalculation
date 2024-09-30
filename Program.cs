@@ -29,7 +29,13 @@ namespace Simple_Hospital_Management_System2
 
         public abstract class Shape
         {
-            
+            protected double length;
+            protected double width;
+
+            public Shape(double length)
+            {
+                this.length = length;
+            }
 
             public Shape(double length, double width)
             {
