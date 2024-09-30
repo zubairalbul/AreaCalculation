@@ -36,7 +36,12 @@ namespace Simple_Hospital_Management_System2
         }
         class Square : Shape
         {
-            
+            public Square(double side) : base(side) { }
+
+            public override double Area()
+            {
+                return length * length;
+            }
         }
         public class square : Shape
         {
