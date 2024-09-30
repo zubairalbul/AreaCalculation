@@ -32,7 +32,11 @@ namespace Simple_Hospital_Management_System2
             
 
             public Shape(double length, double width)
-            
+            {
+                this.length = length;
+                this.width = width;
+            }
+            public abstract double Area();
         }
         class Square : Shape
         {
