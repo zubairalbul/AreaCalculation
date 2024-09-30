@@ -20,11 +20,49 @@ namespace Simple_Hospital_Management_System2
             Shape R = new rectangle(length, width);
             Shape T = new triangle(length, width);
             Shape S = new square(width);
+            bool EnterFlag = false;
 
-            Console.WriteLine("Area of circle: " + C.Area());
-            Console.WriteLine("Area of rectangle: " + R.Area());
-            Console.WriteLine("Area of triangle: " + T.Area());
-            Console.WriteLine("Area of square: " + S.Area());
+            do
+            {
+                
+                try
+                {
+                    
+                    Console.WriteLine("Please Select an shape: ");
+                    Console.WriteLine(" 1. Circle. \n 2. Rectangle. \n 3. Triangle. \n 4. Square.\n5. Exit ");
+                    int Choice = int.Parse(Console.ReadLine());
+                    switch (Choice)
+                    {
+                        case 1:
+                            Console.Clear();
+                            C.Area();
+                            Console.WriteLine("Area of circle: " + C.Area());
+                            break;
+                        case 2:
+                            Console.Clear();
+                            R.Area();
+                            Console.WriteLine("Area of rectangle: " + R.Area());
+                            break;
+                        case 3:
+                            Console.Clear();
+                            T.Area();
+                            Console.WriteLine("Area of triangle: " + T.Area());
+                            break;
+                        case 4:
+                            Console.Clear();
+                            S.Area();
+                            Console.WriteLine("Area of square: " + S.Area());
+                            break;
+                        case 5:
+                            return;
+
+
+                    }
+                }
+                catch (Exception ex) { Console.WriteLine("Invalid Input"); }
+            } while (EnterFlag != true);
+           
+ 
         }
 
         public abstract class Shape
