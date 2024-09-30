@@ -44,7 +44,12 @@ namespace Simple_Hospital_Management_System2
         }
         class circle : Shape
         {
-           
+            public circle(double radius) : base(radius) { }
+
+            public override double Area()
+            {
+                return Math.PI * Math.Pow(length, 2);
+            }
         }
 
         class triangle : Shape
